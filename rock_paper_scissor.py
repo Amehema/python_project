@@ -3,7 +3,7 @@ import random
 Rock='r'
 Paper='p'
 Scissor='s'
-emojis={'r':'🥌','p':'📜','s':'✂'}
+emojis={Rock:'🥌',Paper:'📜',Scissor:'✂'}
 choices=tuple(emojis.keys())
 
 def get_user_choice():
@@ -22,9 +22,9 @@ def determine_choice(user_choice,computer_choice):
     if user_choice == computer_choice:
         print('tie...')
     elif (
-        (user_choice=='r' and computer_choice=='p') or 
-        (user_choice=='p' and computer_choice=='s') or 
-        (user_choice=='s' and computer_choice=='r')):
+        (user_choice==Rock and computer_choice==Paper) or 
+        (user_choice==Paper and computer_choice==Scissor) or 
+        (user_choice==Scissor and computer_choice==Rock)):
         print("You lose :(")
     else:
         print("You win :)")
